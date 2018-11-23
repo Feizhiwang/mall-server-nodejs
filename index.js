@@ -13,11 +13,11 @@ app.use(bodyParser())
 home.post('/userCenter/register', async ( ctx )=>{
   console.log(ctx.request.body)
   let status = 0 
-  if(Math.random > 0.5) {
+  if(Math.random() > 0.5) {
     status = 1
   }
   let html = {
-    status
+    status: status
   }
   ctx.body = JSON.stringify(html)
 })
